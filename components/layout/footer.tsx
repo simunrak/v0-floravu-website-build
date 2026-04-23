@@ -2,35 +2,21 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Github, Twitter, Linkedin, Instagram, ArrowUpRight } from "lucide-react"
+import { Instagram, MapPin, Clock, Truck } from "lucide-react"
 
 const footerLinks = {
-  company: [
-    { label: "About", href: "/about" },
-    { label: "Careers", href: "/careers" },
-    { label: "Blog", href: "/blog" },
-    { label: "Press", href: "/press" },
+  stranice: [
+    { label: "Početna", href: "/" },
+    { label: "Naše Biljke", href: "/work" },
+    { label: "Usluge", href: "/services" },
+    { label: "Kontakt", href: "/contact" },
   ],
-  services: [
-    { label: "Web Design", href: "/services#design" },
-    { label: "Development", href: "/services#development" },
-    { label: "Branding", href: "/services#branding" },
-    { label: "Strategy", href: "/services#strategy" },
-  ],
-  resources: [
-    { label: "Case Studies", href: "/work" },
-    { label: "Documentation", href: "/docs" },
-    { label: "Contact", href: "/contact" },
-    { label: "Support", href: "/support" },
+  info: [
+    { label: "Dostava", href: "/services#dostava" },
+    { label: "Kako naručiti", href: "/services#narucivanje" },
+    { label: "Često pitana pitanja", href: "/contact#faq" },
   ],
 }
-
-const socialLinks = [
-  { label: "Twitter", href: "https://twitter.com", icon: Twitter },
-  { label: "GitHub", href: "https://github.com", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { label: "Instagram", href: "https://instagram.com", icon: Instagram },
-]
 
 export function Footer() {
   return (
@@ -45,7 +31,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
             >
-              <span className="text-balance">Ready to start your next project?</span>
+              <span className="text-balance">Želite naručiti biljke?</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -54,8 +40,8 @@ export function Footer() {
               transition={{ delay: 0.1 }}
               className="max-w-md text-muted-foreground"
             >
-              {"Let's"} collaborate and create something extraordinary together.
-              We&apos;re always excited to work on new challenges.
+              Javite nam se na Instagram i dogovorite svoju narudžbu. 
+              Dostavljamo u Vukovar i Borovo Naselje do 15:00 sati.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -63,24 +49,51 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Link
-                href="/contact"
+              <a
+                href="https://instagram.com/floravu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-lg font-semibold text-primary transition-colors hover:text-primary/80"
               >
-                Get in touch
-                <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </Link>
+                <Instagram className="h-5 w-5" />
+                Naruči na Instagramu
+              </a>
             </motion.div>
+
+            {/* Quick Info */}
+            <div className="grid gap-4 pt-4 sm:grid-cols-2">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                <div>
+                  <p className="font-medium">Lokacija</p>
+                  <p className="text-sm text-muted-foreground">Gradska tržnica Vukovar</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock className="h-5 w-5 text-primary mt-0.5" />
+                <div>
+                  <p className="font-medium">Dostava do</p>
+                  <p className="text-sm text-muted-foreground">15:00 sati</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 sm:col-span-2">
+                <Truck className="h-5 w-5 text-primary mt-0.5" />
+                <div>
+                  <p className="font-medium">Područje dostave</p>
+                  <p className="text-sm text-muted-foreground">Vukovar i Borovo Naselje</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Side - Links */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8">
             <div>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-                Company
+                Stranice
               </h3>
               <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
+                {footerLinks.stranice.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -94,27 +107,10 @@ export function Footer() {
             </div>
             <div>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-                Services
+                Informacije
               </h3>
               <ul className="space-y-3">
-                {footerLinks.services.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-                Resources
-              </h3>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link) => (
+                {footerLinks.info.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -133,28 +129,25 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-border pt-8 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold">
-              <span className="text-primary">Nexus</span>
-              <span className="text-foreground">Studio</span>
+              <span className="text-primary">Flora</span>
+              <span className="text-foreground">Vu</span>
             </span>
           </div>
 
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Nexus Studio. All rights reserved.
+            &copy; {new Date().getFullYear()} FloraVu. Sva prava pridržana.
           </p>
 
           <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground transition-colors hover:text-foreground"
-                aria-label={social.label}
-              >
-                <social.icon className="h-5 w-5" />
-              </a>
-            ))}
+            <a
+              href="https://instagram.com/floravu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+              aria-label="Instagram"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </div>

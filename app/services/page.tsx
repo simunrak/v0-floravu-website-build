@@ -2,104 +2,103 @@
 
 import { motion } from "framer-motion"
 import {
-  Palette,
-  Code,
-  Megaphone,
-  Lightbulb,
-  Search,
-  Smartphone,
-  ArrowRight,
+  Truck,
+  MessageCircle,
+  MapPin,
+  Clock,
+  Heart,
+  Leaf,
+  Instagram,
   Check,
 } from "lucide-react"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
 const services = [
   {
-    id: "design",
-    icon: Palette,
-    title: "UI/UX Design",
+    id: "dostava",
+    icon: Truck,
+    title: "Dostava na kućnu adresu",
     description:
-      "We create intuitive, engaging interfaces that delight users and drive conversions. Our design process is rooted in research and validated through testing.",
+      "Dostavljamo vaše biljke direktno na vašu adresu u Vukovaru i Borovu Naselju. Brza i sigurna dostava istog dana za narudžbe zaprimljene do 15:00 sati.",
     features: [
-      "User Research & Analysis",
-      "Wireframing & Prototyping",
-      "Visual Design Systems",
-      "Usability Testing",
-      "Design Handoff",
+      "Dostava u Vukovar",
+      "Dostava u Borovo Naselje",
+      "Narudžbe do 15:00",
+      "Sigurno pakiranje",
+      "Dostava istog dana",
     ],
   },
   {
-    id: "development",
-    icon: Code,
-    title: "Web Development",
+    id: "narucivanje",
+    icon: MessageCircle,
+    title: "Naručivanje putem Instagrama",
     description:
-      "We build performant, scalable web applications using modern technologies. From marketing sites to complex platforms, we deliver excellence.",
+      "Jednostavno nam pišite na Instagram, odaberite željene biljke iz naše ponude i dogovorite detalje dostave. Brza i jednostavna komunikacija.",
     features: [
-      "Next.js & React Applications",
-      "Custom CMS Integration",
-      "E-commerce Solutions",
-      "API Development",
-      "Performance Optimization",
+      "Brza komunikacija",
+      "Savjeti za odabir",
+      "Pregled ponude",
+      "Dogovor o terminu",
+      "Plaćanje pouzećem",
     ],
   },
   {
-    id: "branding",
-    icon: Megaphone,
-    title: "Brand Identity",
+    id: "kvaliteta",
+    icon: Heart,
+    title: "Kvalitetne biljke",
     description:
-      "We craft distinctive brand identities that communicate your values and resonate with your audience. Every element is designed with purpose.",
+      "Sve naše biljke su zdrave, njegovane i spremne za sadnju. Pažljivo ih biramo i njegujemo kako bi vam služile godinama.",
     features: [
-      "Logo Design & Systems",
-      "Brand Guidelines",
-      "Visual Identity",
-      "Brand Messaging",
-      "Asset Creation",
+      "Zdrave sadnice",
+      "Pažljivo njegovane",
+      "Spremne za sadnju",
+      "Raznolik asortiman",
+      "Sezonska ponuda",
     ],
   },
   {
-    id: "strategy",
-    icon: Lightbulb,
-    title: "Digital Strategy",
+    id: "savjeti",
+    icon: Leaf,
+    title: "Savjeti za njegu",
     description:
-      "We develop comprehensive strategies that align your digital presence with business objectives. Data-driven decisions for measurable results.",
+      "Uz svaku kupnju dobivate savjete za pravilnu njegu vaših biljaka. Pomoći ćemo vam da vaše biljke rastu zdrave i lijepe.",
     features: [
-      "Market Research",
-      "Competitive Analysis",
-      "User Journey Mapping",
-      "Growth Planning",
-      "Analytics & Reporting",
+      "Upute za zalijevanje",
+      "Savjeti za položaj",
+      "Informacije o gnojidbi",
+      "Presađivanje",
+      "Rješavanje problema",
     ],
   },
   {
-    id: "seo",
-    icon: Search,
-    title: "SEO & Marketing",
+    id: "lokacija",
+    icon: MapPin,
+    title: "Posjetite nas na tržnici",
     description:
-      "We optimize your digital presence for search engines and develop marketing strategies that increase visibility and drive qualified traffic.",
+      "Pronađite nas na Gradskoj tržnici Vukovar gdje možete vidjeti cijelu ponudu uživo i odabrati savršene biljke za svoj prostor.",
     features: [
-      "Technical SEO Audit",
-      "Content Strategy",
-      "Link Building",
-      "Local SEO",
-      "Performance Tracking",
+      "Gradska tržnica Vukovar",
+      "Pregled uživo",
+      "Osobni odabir",
+      "Stručni savjeti",
+      "Veliki izbor",
     ],
   },
   {
-    id: "mobile",
-    icon: Smartphone,
-    title: "Mobile Development",
+    id: "vrijeme",
+    icon: Clock,
+    title: "Radno vrijeme",
     description:
-      "We create native and cross-platform mobile applications that provide seamless experiences across all devices and operating systems.",
+      "Posjetite nas tijekom radnog vremena tržnice ili naručite putem Instagrama bilo kada - odgovaramo u najkraćem mogućem roku.",
     features: [
-      "iOS & Android Apps",
-      "React Native Development",
-      "App Store Optimization",
-      "Push Notifications",
-      "Offline Functionality",
+      "Radno vrijeme tržnice",
+      "Instagram 24/7",
+      "Brzi odgovor",
+      "Fleksibilni termini",
+      "Vikend dostava",
     ],
   },
 ]
@@ -107,28 +106,28 @@ const services = [
 const processSteps = [
   {
     number: "01",
-    title: "Discovery",
-    description: "We dive deep into understanding your business, goals, and target audience through research and stakeholder interviews.",
+    title: "Odaberite biljke",
+    description: "Pregledajte našu ponudu na Instagramu ili nas posjetite na tržnici i odaberite biljke koje vam se sviđaju.",
   },
   {
     number: "02",
-    title: "Strategy",
-    description: "We develop a comprehensive plan that outlines the approach, timeline, and deliverables for your project.",
+    title: "Kontaktirajte nas",
+    description: "Pišite nam na Instagram s popisom željenih biljaka i vašom adresom za dostavu.",
   },
   {
     number: "03",
-    title: "Design",
-    description: "Our designers create stunning visuals and intuitive interfaces that bring your vision to life.",
+    title: "Potvrda narudžbe",
+    description: "Potvrditi ćemo dostupnost, dogovoriti cijenu i termin dostave koji vam odgovara.",
   },
   {
     number: "04",
-    title: "Development",
-    description: "Our engineers build robust, scalable solutions using cutting-edge technologies and best practices.",
+    title: "Dostava",
+    description: "Vaše biljke pažljivo pakiramo i dostavljamo na vašu adresu u dogovorenom terminu.",
   },
   {
     number: "05",
-    title: "Launch",
-    description: "We handle deployment, testing, and optimization to ensure a successful launch and continued growth.",
+    title: "Uživajte!",
+    description: "Posadite svoje nove biljke i uživajte u zelenom prostoru. Tu smo za sva pitanja o njezi!",
   },
 ]
 
@@ -143,18 +142,18 @@ export default function ServicesPage() {
             <div className="mx-auto max-w-3xl text-center">
               <ScrollReveal>
                 <span className="text-sm font-medium uppercase tracking-wider text-primary">
-                  Our Services
+                  Naše Usluge
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className="text-balance">Everything you need to succeed online</span>
+                  <span className="text-balance">Kako možemo pomoći</span>
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  From concept to launch and beyond, we provide end-to-end digital
-                  services that help businesses grow and thrive in the digital age.
+                  FloraVu vam nudi jednostavan način da dođete do kvalitetnih biljaka. 
+                  Posjetite nas na tržnici ili naručite s dostavom u Vukovaru i Borovu Naselju.
                 </p>
               </ScrollReveal>
             </div>
@@ -202,18 +201,18 @@ export default function ServicesPage() {
             <div className="mb-16 text-center">
               <ScrollReveal>
                 <span className="text-sm font-medium uppercase tracking-wider text-primary">
-                  Our Process
+                  Kako naručiti
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                  How we work
+                  Jednostavno u 5 koraka
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                  Our proven methodology ensures consistent results and a seamless
-                  experience from start to finish.
+                  Naručivanje biljaka nikad nije bilo lakše. Pratite ove korake 
+                  i vaše biljke će uskoro biti kod vas.
                 </p>
               </ScrollReveal>
             </div>
@@ -277,21 +276,25 @@ export default function ServicesPage() {
               <div className="relative z-10">
                 <ScrollReveal>
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                    Ready to get started?
+                    Spremni za narudžbu?
                   </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={0.1}>
                   <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-                    {"Let's"} discuss your project and see how we can help you achieve
-                    your goals.
+                    Javite nam se na Instagram i dogovorite dostavu vaših novih biljaka. 
+                    Radujemo se vašoj poruci!
                   </p>
                 </ScrollReveal>
                 <ScrollReveal delay={0.2}>
                   <Button asChild size="lg" className="mt-8 h-12 gap-2 px-8">
-                    <Link href="/contact">
-                      Get in Touch
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    <a 
+                      href="https://instagram.com/floravu" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Instagram className="h-5 w-5" />
+                      Naruči na Instagramu
+                    </a>
                   </Button>
                 </ScrollReveal>
               </div>

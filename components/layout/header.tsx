@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Početna" },
+  { href: "/work", label: "Naše Biljke" },
+  { href: "/services", label: "Usluge" },
+  { href: "/contact", label: "Kontakt" },
 ]
 
 export function Header() {
@@ -67,8 +67,8 @@ export function Header() {
                 className="text-xl font-bold tracking-tight lg:text-2xl"
                 whileHover={{ scale: 1.02 }}
               >
-                <span className="text-primary">Nexus</span>
-                <span className="text-foreground">Studio</span>
+                <span className="text-primary">Flora</span>
+                <span className="text-foreground">Vu</span>
               </motion.span>
             </Link>
 
@@ -118,15 +118,19 @@ export function Header() {
                 asChild
                 className="hidden lg:inline-flex group relative overflow-hidden"
               >
-                <Link href="/contact">
-                  <span className="relative z-10">Get in Touch</span>
+                <a 
+                  href="https://instagram.com/floravu" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <span className="relative z-10">Naruči na Instagramu</span>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%]"
                     animate={{ backgroundPosition: ["0% 0%", "100% 0%", "0% 0%"] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                     style={{ opacity: 0.5 }}
                   />
-                </Link>
+                </a>
               </Button>
 
               {/* Mobile Menu Button */}
@@ -212,9 +216,14 @@ export function Header() {
                 transition={{ duration: 0.3, delay: 0.3 }}
               >
                 <Button asChild size="lg" className="mt-4">
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    Get in Touch
-                  </Link>
+                  <a 
+                    href="https://instagram.com/floravu" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Naruči na Instagramu
+                  </a>
                 </Button>
               </motion.div>
             </motion.nav>

@@ -9,31 +9,31 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal"
 const testimonials = [
   {
     quote:
-      "Nexus Studio transformed our digital presence completely. Their attention to detail and creative vision exceeded our expectations. The results speak for themselves.",
-    author: "Sarah Chen",
-    role: "CEO, TechFlow",
-    avatar: "SC",
+      "Prekrasne biljke i odlična usluga! Dostava je bila brza, a sve sadnice su bile u savršenom stanju. Preporučujem svima!",
+    author: "Ana K.",
+    role: "Vukovar",
+    avatar: "AK",
   },
   {
     quote:
-      "Working with the Nexus team was a game-changer for our brand. They understood our vision from day one and delivered a product that truly resonates with our audience.",
-    author: "Michael Torres",
-    role: "Founder, Elevate",
-    avatar: "MT",
+      "Konačno kvalitetne biljke dostupne lokalno. Komunikacija putem Instagrama je bila super jednostavna, a biljke su predivne.",
+    author: "Marko P.",
+    role: "Borovo Naselje",
+    avatar: "MP",
   },
   {
     quote:
-      "The level of professionalism and creativity is unmatched. They delivered our project ahead of schedule and the quality was exceptional. Highly recommend!",
-    author: "Emily Watson",
-    role: "CMO, Innovate Inc",
-    avatar: "EW",
+      "Kupila sam začinsko bilje i cvjetnice za balkon. Sve je procvjetalo i izgleda fenomenalno. Hvala FloraVu!",
+    author: "Ivana M.",
+    role: "Vukovar",
+    avatar: "IM",
   },
   {
     quote:
-      "From strategy to execution, Nexus Studio delivered excellence at every step. Our conversion rates increased by 150% after the redesign.",
-    author: "David Park",
-    role: "Director, GrowthLabs",
-    avatar: "DP",
+      "Jako sam zadovoljna s kupljenim sadnicama. Osoblje na tržnici je ljubazno i daje odlične savjete za njegu biljaka.",
+    author: "Petra S.",
+    role: "Vukovar",
+    avatar: "PS",
   },
 ]
 
@@ -54,10 +54,10 @@ export function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <span className="text-sm font-medium uppercase tracking-wider text-primary">
-            Testimonials
+            Recenzije
           </span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-            What our clients say
+            Što kažu naši kupci
           </h2>
         </ScrollReveal>
 
@@ -98,7 +98,7 @@ export function Testimonials() {
               size="icon"
               onClick={prev}
               className="h-10 w-10 rounded-full border-border/50"
-              aria-label="Previous testimonial"
+              aria-label="Prethodna recenzija"
             >
               <ChevronLeft className="h-5 w-5" />
             </Button>
@@ -114,7 +114,7 @@ export function Testimonials() {
                       ? "w-8 bg-primary"
                       : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                   }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Idi na recenziju ${index + 1}`}
                 />
               ))}
             </div>
@@ -124,7 +124,7 @@ export function Testimonials() {
               size="icon"
               onClick={next}
               className="h-10 w-10 rounded-full border-border/50"
-              aria-label="Next testimonial"
+              aria-label="Sljedeća recenzija"
             >
               <ChevronRight className="h-5 w-5" />
             </Button>

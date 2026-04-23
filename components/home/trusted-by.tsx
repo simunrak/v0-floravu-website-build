@@ -2,36 +2,36 @@
 
 import { Marquee } from "@/components/ui/marquee"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { Flower2, TreeDeciduous, Shrub, Leaf, Sprout, FlowerIcon } from "lucide-react"
 
-const clients = [
-  { name: "Google", logo: "GOOGLE" },
-  { name: "Microsoft", logo: "MICROSOFT" },
-  { name: "Spotify", logo: "SPOTIFY" },
-  { name: "Airbnb", logo: "AIRBNB" },
-  { name: "Stripe", logo: "STRIPE" },
-  { name: "Slack", logo: "SLACK" },
-  { name: "Notion", logo: "NOTION" },
-  { name: "Figma", logo: "FIGMA" },
+const categories = [
+  { name: "Sobne biljke", icon: Flower2 },
+  { name: "Vrtne biljke", icon: TreeDeciduous },
+  { name: "Grmlje", icon: Shrub },
+  { name: "Začinsko bilje", icon: Leaf },
+  { name: "Sadnice povrća", icon: Sprout },
+  { name: "Cvjetnice", icon: FlowerIcon },
 ]
 
 export function TrustedBy() {
   return (
-    <section className="border-y border-border bg-card/20 py-16">
+    <section id="ponuda" className="border-y border-border bg-card/20 py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="mb-10 text-center text-sm font-medium uppercase tracking-wider text-muted-foreground">
-            Trusted by industry leaders
+            Naš asortiman
           </p>
         </ScrollReveal>
 
         <Marquee speed="slow" pauseOnHover>
-          {clients.map((client) => (
+          {categories.map((category) => (
             <div
-              key={client.name}
-              className="mx-8 flex h-12 items-center justify-center px-4"
+              key={category.name}
+              className="mx-8 flex h-12 items-center justify-center gap-3 px-4"
             >
-              <span className="text-xl font-bold tracking-widest text-muted-foreground/60 transition-colors hover:text-muted-foreground">
-                {client.logo}
+              <category.icon className="h-5 w-5 text-primary" />
+              <span className="text-lg font-medium tracking-wide text-muted-foreground/80 transition-colors hover:text-foreground">
+                {category.name}
               </span>
             </div>
           ))}

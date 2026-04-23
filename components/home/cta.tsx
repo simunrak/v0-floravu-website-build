@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { Instagram, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
@@ -19,27 +19,31 @@ export function CTA() {
             <ScrollReveal>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                 <span className="text-balance">
-                  Ready to bring your vision to life?
+                  Spremni za nove biljke?
                 </span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
               <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-                {"Let's"} collaborate and create something extraordinary. 
-                Get in touch to discuss your next project.
+                Javite nam se na Instagram i dogovorite svoju narudžbu, 
+                ili nas posjetite na Gradskoj tržnici Vukovar.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="group h-12 px-8">
-                  <Link href="/contact">
+                  <a 
+                    href="https://instagram.com/floravu" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     <span className="flex items-center gap-2">
-                      Start a Project
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      <Instagram className="h-5 w-5" />
+                      Naruči na Instagramu
                     </span>
-                  </Link>
+                  </a>
                 </Button>
                 <Button
                   asChild
@@ -47,7 +51,10 @@ export function CTA() {
                   size="lg"
                   className="h-12 border-border/50 bg-background/50 px-8 backdrop-blur-sm"
                 >
-                  <Link href="/work">View Our Work</Link>
+                  <Link href="/contact">
+                    <MapPin className="mr-2 h-4 w-4" />
+                    Pronađi nas
+                  </Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -57,7 +64,7 @@ export function CTA() {
               <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {["A", "B", "C", "D"].map((letter, i) => (
+                    {["A", "M", "I", "P"].map((letter, i) => (
                       <motion.div
                         key={letter}
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -70,7 +77,7 @@ export function CTA() {
                       </motion.div>
                     ))}
                   </div>
-                  <span>50+ Happy Clients</span>
+                  <span>Zadovoljni kupci</span>
                 </div>
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -86,7 +93,7 @@ export function CTA() {
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </motion.svg>
                   ))}
-                  <span className="ml-2">5.0 Average Rating</span>
+                  <span className="ml-2">5.0 ocjena</span>
                 </div>
               </div>
             </ScrollReveal>

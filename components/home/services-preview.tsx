@@ -2,37 +2,37 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Palette, Code, Megaphone, Lightbulb, ArrowUpRight } from "lucide-react"
+import { Truck, Clock, MessageCircle, Heart, ArrowUpRight } from "lucide-react"
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal"
 
 const services = [
   {
-    icon: Palette,
-    title: "UI/UX Design",
+    icon: Truck,
+    title: "Brza dostava",
     description:
-      "Crafting intuitive interfaces and seamless user experiences that delight customers and drive engagement.",
-    href: "/services#design",
+      "Dostavljamo u Vukovar i Borovo Naselje. Narudžbe zaprimamo do 15:00 sati za dostavu istog dana.",
+    href: "/services#dostava",
   },
   {
-    icon: Code,
-    title: "Web Development",
+    icon: MessageCircle,
+    title: "Naručite putem Instagrama",
     description:
-      "Building performant, scalable web applications using cutting-edge technologies and best practices.",
-    href: "/services#development",
+      "Jednostavno nam pišite na Instagram, dogovorite detalje i mi vam dostavimo biljke na kućnu adresu.",
+    href: "/services#narucivanje",
   },
   {
-    icon: Megaphone,
-    title: "Brand Identity",
+    icon: Heart,
+    title: "Kvalitetne biljke",
     description:
-      "Creating distinctive brand identities that resonate with your audience and stand out in the market.",
-    href: "/services#branding",
+      "Sve naše biljke su zdrave, njegovane i spremne za sadnju u vašem domu ili vrtu.",
+    href: "/services#kvaliteta",
   },
   {
-    icon: Lightbulb,
-    title: "Digital Strategy",
+    icon: Clock,
+    title: "Posjetite nas",
     description:
-      "Developing comprehensive digital strategies that align with your business goals and drive growth.",
-    href: "/services#strategy",
+      "Pronađite nas na Gradskoj tržnici Vukovar gdje možete vidjeti cijelu ponudu i odabrati biljke uživo.",
+    href: "/contact",
   },
 ]
 
@@ -43,10 +43,10 @@ export function ServicesPreview() {
         <div className="mb-16 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <ScrollReveal>
             <span className="text-sm font-medium uppercase tracking-wider text-primary">
-              What We Do
+              Zašto FloraVu
             </span>
             <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              <span className="text-balance">Services tailored to your vision</span>
+              <span className="text-balance">Jednostavno do vaših biljaka</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
@@ -54,7 +54,7 @@ export function ServicesPreview() {
               href="/services"
               className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80"
             >
-              View all services
+              Sve usluge
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </ScrollReveal>
@@ -77,7 +77,7 @@ export function ServicesPreview() {
                     {service.description}
                   </p>
                   <div className="mt-4 flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                    Learn more
+                    Saznaj više
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </motion.div>

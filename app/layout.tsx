@@ -10,18 +10,19 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Nexus Studio | Premium Digital Agency',
-  description: 'We craft exceptional digital experiences that transform brands and drive business growth. Award-winning design, development, and strategy.',
-  keywords: 'digital agency, web design, development, branding, UI/UX, creative studio',
+  title: 'FloraVu | Biljke za vaš dom i vrt',
+  description: 'FloraVu nudi kvalitetne biljke za sadnju u vašem domu i vrtu. Posjetite nas na Gradskoj tržnici Vukovar ili naručite s dostavom do 15:00 u Vukovaru i Borovu Naselju.',
+  keywords: 'biljke, sadnice, vrt, dom, Vukovar, Borovo Naselje, tržnica, dostava',
   openGraph: {
-    title: 'Nexus Studio | Premium Digital Agency',
-    description: 'Crafting exceptional digital experiences that transform brands.',
+    title: 'FloraVu | Biljke za vaš dom i vrt',
+    description: 'Kvalitetne biljke s dostavom u Vukovaru i Borovu Naselju.',
     type: 'website',
+    locale: 'hr_HR',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a1a1a',
+  themeColor: '#2d6a4f',
   width: 'device-width',
   initialScale: 1,
 }
@@ -32,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="hr" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
