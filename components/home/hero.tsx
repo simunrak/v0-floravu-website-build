@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Instagram, MapPin, Clock, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { FlowerRise } from "@/components/home/flower-rise"
 
 export function Hero() {
   return (
@@ -23,7 +24,10 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pt-20 sm:px-6 lg:px-8">
+      {/* Decorative flower-rise entrance animation */}
+      <FlowerRise />
+
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pt-20 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
           <motion.div
