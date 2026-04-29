@@ -35,7 +35,7 @@ export function CTA() {
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="group h-12 px-8">
                   <a 
-                    href="https://instagram.com/floravu" 
+                    href="https://www.instagram.com/flora.vukovar/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >

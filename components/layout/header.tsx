@@ -119,7 +119,7 @@ export function Header() {
                 className="hidden lg:inline-flex group relative overflow-hidden"
               >
                 <a 
-                  href="https://instagram.com/floravu" 
+                  href="https://www.instagram.com/flora.vukovar/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -217,7 +217,7 @@ export function Header() {
               >
                 <Button asChild size="lg" className="mt-4">
                   <a 
-                    href="https://instagram.com/floravu" 
+                    href="https://www.instagram.com/flora.vukovar/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}

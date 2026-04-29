@@ -80,7 +80,7 @@ export function Hero() {
           >
             <Button asChild size="lg" className="group relative h-12 overflow-hidden px-8">
               <a 
-                href="https://instagram.com/floravu" 
+                href="https://www.instagram.com/flora.vukovar/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
