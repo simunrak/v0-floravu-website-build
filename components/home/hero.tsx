@@ -150,19 +150,26 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 sm:bottom-6 lg:bottom-8"
         >
           <motion.div
-            animate={{ y: [0, 8, 0] }}
+            animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="flex flex-col items-center gap-2"
+            className="flex flex-col items-center gap-1.5"
           >
-            <span className="text-xs text-muted-foreground">Pogledaj više</span>
-            <div className="h-10 w-6 rounded-full border-2 border-border p-1">
+            <span className="text-xs font-medium text-muted-foreground">Pogledaj više</span>
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="h-8 w-5 rounded-full border-1.5 border-primary/60 p-1">
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                  className="mx-auto h-1.5 w-1.5 rounded-full bg-primary"
+                />
+              </div>
               <motion.div
-                animate={{ y: [0, 12, 0] }}
+                animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="h-2 w-2 rounded-full bg-primary"
+                className="h-1 w-0.5 rounded-full bg-primary"
               />
             </div>
           </motion.div>
