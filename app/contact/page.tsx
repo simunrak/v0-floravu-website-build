@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@floravu",
-    href: "https://instagram.com/floravu",
+    value: "@flora.vukovar",
+    href: "https://www.instagram.com/flora.vukovar/",
     description: "Naš glavni kanal za narudžbe",
   },
   {
@@ -113,7 +113,7 @@ export default function ContactPage() {
                 </p>
                 <Button asChild size="lg" className="mt-8 h-12 px-8">
                   <a 
-                    href="https://instagram.com/floravu" 
+                    href="https://www.instagram.com/flora.vukovar/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >

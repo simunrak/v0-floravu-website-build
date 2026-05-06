@@ -50,7 +50,7 @@ export function Footer() {
               transition={{ delay: 0.2 }}
             >
               <a
-                href="https://instagram.com/floravu"
+                href="https://www.instagram.com/flora.vukovar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-lg font-semibold text-primary transition-colors hover:text-primary/80"
@@ -140,7 +140,7 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://instagram.com/floravu"
+              href="https://www.instagram.com/flora.vukovar/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"

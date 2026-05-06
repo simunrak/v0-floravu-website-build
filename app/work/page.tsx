@@ -152,7 +152,7 @@ export default function WorkPage() {
             <ScrollReveal delay={0.2}>
               <Button asChild size="lg" className="mt-8 h-12 px-8">
                 <a 
-                  href="https://instagram.com/floravu" 
+                  href="https://www.instagram.com/flora.vukovar/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
